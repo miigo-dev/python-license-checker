@@ -16,7 +16,7 @@ def manual_check(license_num):
         soup = BeautifulSoup(response.text, 'html.parser')
         links = soup.find_all('a')
         # manual iteration to find and return personnel name
-        personnel_name = links[25].text
+        personnel_name = links[24].text
         # raise exception if href_link returns "Check a License or HIS Registration"
         if "HIS" in personnel_name:
             raise LicenseNotExistsException
